@@ -14,5 +14,10 @@
   <p>Meu nome é: <strong><%= nome%></strong></p>
   <p>Minha linguagem favorita é: <strong><%= lang%></strong></p>
   <p>Trabalho na empresa: <strong> <%= empresa%> </strong></p>
+  <% if(msg) { %>
+    <h3>Isso é uma mensagem de erro!</h3>
+  <% } else {%>
+    <h3>Não tem erro!</h3>
+  <% } %>
 </body>
 </html>
