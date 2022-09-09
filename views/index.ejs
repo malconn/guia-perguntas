@@ -6,30 +6,11 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Guia perguntas</title>
  <link rel="stylesheet" href="/css/style.css">
+ <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
-<body>
-  <h1>Guia perguntas!</h1>
-  <img src="/img/guia-programador-logo.png" alt="" srcset="">
-  <hr>
-  <h3>Lista perguntas!</h3>
-
-  <p>Meu nome é: <strong><%= nome%></strong></p>
-  <p>Minha linguagem favorita é: <strong><%= lang%></strong></p>
-  <p>Trabalho na empresa: <strong> <%= empresa%> </strong></p>
-  <% if(msg) { %>
-    <h3>Isso é uma mensagem de erro!</h3>
-  <% } else {%>
-    <h3>Não tem erro!</h3>
-  <% } %>
-
-  <%produtos.forEach(function(produto) {%>
-    <hr>
-    <h4>
-      Nome Produto: <%=produto.nome %>
-    </h4>
-    <p>
-      Preço: <%=produto.preco %>
-    </p>
-  <% }) %>
-</body>
-</html>
+<body> 
+ <h1>Estilo do bootstrap</h1>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script></body>
+ <script src="/js/bootstrap.min.js"></script>
+ </html>
