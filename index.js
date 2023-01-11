@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
 const Pergunta = require('./database/Pergunta');
+
 //Database
 connection.authenticate().then(()=>{
  console.log("Conexão feita com o banco de dados!")
@@ -39,7 +40,21 @@ app.post('/salvarpergunta',(req,res)=>{
  }).then(()=>{
   res.redirect('/')
  })
-})
+});
+
+
+app.get('/pergunta/:id',(req,res)=>{
+  const id = req.params.id;
+  Pergunta.findOne({
+    where:{id: id}
+  }).then((pergunta)=>{
+    if(pergunta != undefined){
+      res.render('pergunta');
+    }else{
+      res.redirect('/')
+    }
+  })
+});
 
 app.listen(8080,()=>{
  console.log('App rodando');
