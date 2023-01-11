@@ -1,3 +1,11 @@
 <%- include ('partials/header') %>
-<body></body>
+<body>
+  <%- include ('partials/navbar') %>
+  <div class="container">
+    <hr />
+    <h3><%= question.title  %></h3>
+    <p><%= question.description %></p>
+    <hr />
+  </div>
+</body>
 <%- include ('partials/footer') %>
