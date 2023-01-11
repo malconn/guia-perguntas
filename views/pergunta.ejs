@@ -6,7 +6,7 @@
     <h3><%= question.title  %></h3>
     <p><%= question.description %></p>
     <hr />
-    <form>
+    <form method="POST" action="/responder">
       <h3>Responda</h3>
       <label>Resposta:</label>
       <textarea 
@@ -15,7 +15,7 @@
         class="form-control">
       </textarea>
       <br>
-      <input type="hidden" name="pergunta" value="<%= question.id %>">
+      <input type="hidden" name="questionId" value="<%= question.id %>">
       <button type="submit" class="btn btn-primary">Responder</button>
     </form>
   </div>
